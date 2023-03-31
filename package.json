@@ -1,29 +1,33 @@
 {
   "name": "fetra",
   "version": "0.0.1",
-  "type": "module",
   "description": "a fetch wrapper for node and browser",
+  "keywords": [
+    "fetch",
+    "interceptor",
+    "wrapper"
+  ],
+  "homepage": "https://github.com/mingshuisheng/fetra",
+  "bugs": "https://github.com/mingshuisheng/fetra/issues",
   "author": "mingshuisheng",
   "license": "MIT",
   "files": [
     "dist"
   ],
+  "main": "./dist/index.cjs.js",
+  "module": "./dist/index.esm.js",
+  "types": "./dist/types/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mingshuisheng/fetra"
+  },
   "browser": {
     ".": "./dist/index.js"
   },
   "engines": {
     "node": ">=17.5.0"
   },
-  "exports": {
-    ".": {
-      "import": "./dist/index.esm.js",
-      "require": "./dist/index.cjs.js",
-      "types:": "./dist/types/index.d.ts"
-    }
-  },
-  "main": "./dist/index.cjs.js",
-  "module": "./dist/index.esm.js",
-  "typings": "./dist/types/index.d.ts",
+  "type": "module",
   "scripts": {
     "dev": "rollup --config rollup.config.js --watch",
     "build": "rollup --config rollup.config.js"
