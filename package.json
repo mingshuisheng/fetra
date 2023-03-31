@@ -1,0 +1,38 @@
+{
+  "name": "fetra",
+  "version": "0.0.1",
+  "type": "module",
+  "description": "a fetch wrapper for node and browser",
+  "author": "mingshuisheng",
+  "license": "MIT",
+  "files": [
+    "dist"
+  ],
+  "browser": {
+    ".": "./dist/index.js"
+  },
+  "engines": {
+    "node": ">=17.5.0"
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/index.esm.js",
+      "require": "./dist/index.cjs.js",
+      "types:": "./dist/types/index.d.ts"
+    }
+  },
+  "main": "./dist/index.cjs.js",
+  "module": "./dist/index.esm.js",
+  "typings": "./dist/types/index.d.ts",
+  "scripts": {
+    "dev": "rollup --config rollup.config.js --watch",
+    "build": "rollup --config rollup.config.js"
+  },
+  "devDependencies": {
+    "@rollup/plugin-terser": "^0.4.0",
+    "@rollup/plugin-typescript": "^11.0.0",
+    "rollup": "^3.20.2",
+    "tslib": "^2.5.0",
+    "typescript": "^5.0.2"
+  }
+}
