@@ -13,12 +13,14 @@ export default [
         format: 'umd',
       }
     ],
-    plugins: [typescript({
-      compilerOptions: {
-        declaration: false,
-        declarationDir: null,
-      }
-    }), terser()]
+    plugins: [
+      typescript({
+        compilerOptions: {
+          declaration: false,
+          declarationDir: null,
+        }
+      }), terser()
+    ]
   },
   {
     input: "src/index.ts",
